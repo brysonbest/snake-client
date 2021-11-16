@@ -16,6 +16,7 @@ const connect = function() {
   conn.on('connect', () => {
     conn.write("Name: BJB");
     console.log("Successfully connected to game server.");
+    //conn.write("Move: up");
   });
 
 
@@ -23,4 +24,18 @@ const connect = function() {
   return conn;
 };
 
-module.exports = connect;
+const setupInput = function () {
+  const stdin = process.stdin;
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
+  const handleUserInput = function(data) {
+    if(data === '\u0003') {
+      process.exit();
+    }
+  }
+  stdin.on("data", handleUserInput);
+  return stdin;
+};
+
+module.exports = {connect, setupInput};
