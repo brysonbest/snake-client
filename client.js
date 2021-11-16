@@ -7,9 +7,18 @@ const connect = function() {
   });
 
   conn.setEncoding('utf8');
+  //when data is received
   conn.on('data', (data) => {
     console.log(data);
   });
+
+  //on connect
+  conn.on('connect', () => {
+    conn.write("Name: BJB");
+    console.log("Successfully connected to game server.");
+  });
+
+
 
   return conn;
 };
