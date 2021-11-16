@@ -18,6 +18,15 @@ const handleUserInput = function(data) {
   if (data === '\u0044' || data === '\u0064') {
     connection.write("Move: right");
   }
+  if (data === 'q') {
+    connection.write("Say: Cowabunga doods");
+  }
+  if (data === 'e') {
+    connection.write("Say: Sneks are cool");
+  }
+  if (data === 'r') {
+    connection.write("Say: lets... slither");
+  }
 };
 //function that takes in user input
 const setupInput = (conn) => {
