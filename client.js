@@ -1,5 +1,5 @@
 const net = require('net');
-const {IP, PORT} = require('./constants');
+const {IP, PORT, NAME} = require('./constants');
 
 const connect = function() {
   const conn = net.createConnection({
@@ -15,7 +15,7 @@ const connect = function() {
 
   //on connect
   conn.on('connect', () => {
-    conn.write("Name: BJB");
+    conn.write(NAME);
     console.log("Successfully connected to game server.");
     //conn.write("Move: up");
   });
