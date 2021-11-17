@@ -8,9 +8,13 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
+#### First Appearance 
 !["First appearance in-game"](screens/Snake_Client1.png)
+
+#### After Eating a Bit
 !["After Eating a bit"](screens/Snake_Client2.png)
 
+#### Saying Snake Things
 !["Saying totally rad snake things"](screens/Snake_Client3.png)
 
 
